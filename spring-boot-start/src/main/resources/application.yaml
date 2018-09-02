@@ -1,0 +1,57 @@
+#########mysql数据库配置###########
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+#########spring jpa配置############
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+      naming:
+        strategy: org.hibernate.cfg.ImprovedNamingStrategy
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+
+##############jsp配置###############
+#  mvc:
+#     view:
+#       prefix: /WEB-INF/jsp/
+#       suffix: .jsp
+
+  ############freemarker配置##########
+  freemarker:
+    allow-request-override: false
+    cache: false
+    check-template-location: true
+    charset: UTF-8
+    content-type: text/html
+    expose-request-attributes: false
+    expose-session-attributes: false
+    expose-spring-macro-helpers: false
+#    template-loader-path: /ftl/ #
+      # prefix:
+         # suffix:.ftl
+#    目前的问题：
+#
+#        通过maven进行聚合以后修改模板位置会导致页面无法访问
+#
+#    同时静态资源的访问也会失效，保留默认配置不会存在这些问题
+
+
+
+
+################server############
+server:
+  port: 80
+  #context-path: /jack
+  tomcat:
+    uri-encoding: utf-8
+
+
+
+

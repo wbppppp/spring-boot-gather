@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.example</groupId>
+  <artifactId>spring-boot-gather</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+
+  <modules>
+    <module>spring-boot-start</module>
+	<module>spring-boot-mybatis</module>
+	<module>spring-boot-mybatis-generator-xml</module>
+	<module>spring-boot-quartz</module>
+	<module>spring-boot-quartz2</module>
+	<module>spring-boot-servlet</module>
+	<module>spring-boot-task</module>
+	<module>spring-boot-start-cxf-client</module>
+  </modules>
+
+  <name>spring-boot-gather</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+  <!--spring boot父节点依赖，添加这个以后，之后的spring boot相关的依赖就不需要添加版本号-->
+  <parent>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-parent</artifactId>
+    <version>1.4.1.RELEASE</version>
+  </parent>
+
+  <build>
+    <plugins>
+
+      <!--springloader plugin-->
+      <!--<plugin>
+          <groupId>org.springframework.boot</groupId>
+          <artifactId>spring-boot-maven-plugin</artifactId>
+          <dependencies>
+             &lt;!&ndash; spring热部署 &ndash;&gt;
+              <dependency>
+                  <groupId>org.springframework</groupId>
+                  <artifactId>springloaded</artifactId>
+                  <version>1.2.4.RELEASE</version>
+              </dependency>
+          </dependencies>
+          <executions>
+              <execution>
+                  <goals>
+                      <goal>repackage</goal>
+                  </goals>
+                  <configuration>
+                      <classifier>exec</classifier>
+                  </configuration>
+              </execution>
+          </executions>
+      </plugin>-->
+
+      <!--devtools 热部署插件配置-->
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <fork>true</fork>
+        </configuration>
+      </plugin>
+    </plugins>
+
+  </build>
+
+
+</project>
