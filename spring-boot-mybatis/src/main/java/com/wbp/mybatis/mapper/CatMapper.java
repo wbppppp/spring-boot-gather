@@ -1,6 +1,6 @@
-package com.mybatis.mapper;
+package com.wbp.mybatis.mapper;
 
-import com.mybatis.pojo.Cat;
+import com.wbp.mybatis.pojo.Cat;
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;

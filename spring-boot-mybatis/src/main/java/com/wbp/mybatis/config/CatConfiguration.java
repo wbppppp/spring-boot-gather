@@ -1,22 +1,14 @@
-package com.mybatis.config;
+package com.wbp.mybatis.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 
 /**
  * Created by Administrator on 2018/7/31 0031.
  */
 @Configuration
-@EnableConfigurationProperties(CatConfiguration.class)
-public class CatConfigurationProperties {
-
-    /**
-     * 不添加@EnableConfigurationProperties注解无法注入该配置类
-     *
-     */
-    @Autowired
-    private CatConfiguration catConfiguration;
+@ConfigurationProperties(prefix = "cat") //通过配置文件注入属性值
+public class CatConfiguration {
 
     private int id;
 
@@ -48,7 +40,4 @@ public class CatConfigurationProperties {
         this.name = name;
     }
 
-    public void test(){
-        System.out.println(catConfiguration.getName());
-    }
 }

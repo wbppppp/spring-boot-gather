@@ -1,8 +1,8 @@
-package com.mybatis.service;
+package com.wbp.mybatis.service;
 
 import com.github.pagehelper.PageHelper;
-import com.mybatis.mapper.CatMapper;
-import com.mybatis.pojo.Cat;
+import com.wbp.mybatis.mapper.CatMapper;
+import com.wbp.mybatis.pojo.Cat;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

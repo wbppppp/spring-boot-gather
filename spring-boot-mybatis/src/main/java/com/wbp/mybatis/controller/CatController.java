@@ -1,12 +1,10 @@
-package com.mybatis.controller;
+package com.wbp.mybatis.controller;
 
-import com.github.pagehelper.PageHelper;
-import com.mybatis.pojo.Cat;
-import com.mybatis.service.CatService;
+import com.wbp.mybatis.pojo.Cat;
+import com.wbp.mybatis.service.CatService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;

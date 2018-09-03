@@ -1,14 +1,10 @@
-package com.mybatis.config;
+package com.wbp.mybatis.pojo;
 
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
 
 /**
- * Created by Administrator on 2018/7/31 0031.
+ * Created by Administrator on 2018/6/10 0010.
  */
-@Configuration
-@ConfigurationProperties(prefix = "cat")
-public class CatConfiguration {
+public class Cat {
 
     private int id;
 
@@ -40,4 +36,11 @@ public class CatConfiguration {
         this.name = name;
     }
 
+    public Cat(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public Cat() {
+    }
 }
