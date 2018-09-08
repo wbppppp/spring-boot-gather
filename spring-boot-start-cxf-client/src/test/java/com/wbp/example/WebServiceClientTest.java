@@ -1,4 +1,4 @@
-package com.example;
+package com.wbp.example;
 
 import org.apache.cxf.endpoint.Client;
 import org.apache.cxf.jaxws.endpoint.dynamic.JaxWsDynamicClientFactory;

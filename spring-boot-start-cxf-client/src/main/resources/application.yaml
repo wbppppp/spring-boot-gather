@@ -47,7 +47,7 @@ spring:
 
 ################server############
 server:
-  port: 81
+  port: 82
   #context-path: /jack
   tomcat:
     uri-encoding: utf-8
