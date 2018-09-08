@@ -1,4 +1,4 @@
-package com.task.job;
+package com.wbp.task.job;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;

@@ -1,12 +1,7 @@
-package com.task;
+package com.wbp.task;
 
-import com.task.job.MyJob;
-import org.quartz.*;
-import org.quartz.impl.StdSchedulerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.concurrent.TimeUnit;
 
 /**
  * Created by Administrator on 2018/6/9 0009.
@@ -16,6 +11,9 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         /**
+         * 第一种方案：
+         *      创建job类，实现Job接口，并在main中调用以下步骤
+         *
          * 1.获取到Scheduler实例并启动调度器
          * 2.创建具体的任务jobDetail
          * 3.创建触发器trigger
@@ -42,6 +40,12 @@ public class App {
         TimeUnit.SECONDS.sleep(20);
 
         scheduler.shutdown();*/
+
+        /**
+         * 第二种方案：
+         *     创建任务类Schedutask，配置类ScheduledConfiguration（用来启用定时）
+         *
+         */
         SpringApplication.run(App.class,args);
     }
 }

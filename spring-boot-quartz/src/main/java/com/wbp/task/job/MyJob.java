@@ -1,4 +1,4 @@
-package com.task.job;
+package com.wbp.task.job;
 
 import org.quartz.Job;
 import org.quartz.JobExecutionContext;

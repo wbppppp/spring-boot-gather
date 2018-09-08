@@ -1,6 +1,6 @@
-package com.task.config;
+package com.wbp.task.config;
 
-import com.task.job.Schedutask;
+import com.wbp.task.job.Schedutask;
 import org.quartz.Trigger;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
