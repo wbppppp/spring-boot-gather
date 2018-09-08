@@ -27,7 +27,7 @@
 
   <dependencies>
 
-    <!--提供了mvc aop等依赖包-->
+    <!--提供了mvc aop等依赖包 -->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-web</artifactId>
