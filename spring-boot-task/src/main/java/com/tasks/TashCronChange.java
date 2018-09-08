@@ -1,4 +1,4 @@
-package com.task.tasks;
+package com.tasks;
 
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.SchedulingConfigurer;
