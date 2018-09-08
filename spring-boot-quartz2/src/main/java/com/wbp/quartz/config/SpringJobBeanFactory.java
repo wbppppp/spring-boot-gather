@@ -1,4 +1,4 @@
-package com.quartz.config;
+package com.wbp.quartz.config;
 
 import org.quartz.spi.TriggerFiredBundle;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +7,7 @@ import org.springframework.scheduling.quartz.AdaptableJobFactory;
 import org.springframework.stereotype.Component;
 
 /**
- * Created by Administrator on 2018/6/24 0024.
+ * 用于配置到Quartz的配置bean中，将job类交由spring管理
  */
 @Component
 public class SpringJobBeanFactory extends AdaptableJobFactory{

@@ -1,6 +1,5 @@
-package com.quartz.task;
+package com.wbp.quartz.task;
 
-import com.quartz.job.HelloJob;
 import org.quartz.*;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -19,10 +18,6 @@ public class BaseTask implements Job {
     public void init() throws Exception {
 
         System.out.println("simpleName --> " + this.getClass().getSimpleName());
-
-        //JobDetail jobDetail = JobBuilder.newJob(HelloJob.class).withIdentity("job1","group1").build();
-        //ScheduleBuilder scheduleBuilder = SimpleScheduleBuilder.simpleSchedule().withIntervalInSeconds(5).repeatForever();
-        //Trigger trigger = TriggerBuilder.newTrigger().withIdentity("trigger1","group1").withSchedule(scheduleBuilder).build();
 
         JobDetail jobDetail = JobBuilder.newJob(this.getClass()).withIdentity("job1","group1").build();
         Trigger trigger = TriggerBuilder.newTrigger().withSchedule(CronScheduleBuilder.cronSchedule("0/5 * * * * ?")).build();

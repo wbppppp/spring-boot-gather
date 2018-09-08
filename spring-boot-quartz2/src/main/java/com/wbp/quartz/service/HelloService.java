@@ -1,4 +1,4 @@
-package com.quartz.service;
+package com.wbp.quartz.service;
 
 import org.springframework.stereotype.Service;
 

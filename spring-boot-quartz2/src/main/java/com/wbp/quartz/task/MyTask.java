@@ -1,14 +1,10 @@
-package com.quartz.task;
+package com.wbp.quartz.task;
 
-import com.quartz.job.HelloJob;
-import com.quartz.service.HelloService;
+import com.wbp.quartz.service.HelloService;
 import org.quartz.*;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PostMapping;
 
-import javax.annotation.PostConstruct;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
@@ -40,21 +36,5 @@ public class MyTask extends BaseTask{
         System.out.println("mytask :" + new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
         helloService.hello();
     }
-
-
-
-    /*@PostConstruct //等同于init-method
-    public void init() throws Exception {
-        JobDetail jobDetail = JobBuilder.newJob(HelloJob.class).withIdentity("job1","group1").build();
-
-        ScheduleBuilder scheduleBuilder = SimpleScheduleBuilder.simpleSchedule().withIntervalInSeconds(5).repeatForever();
-        Trigger trigger = TriggerBuilder.newTrigger().withIdentity("trigger1","group1").withSchedule(scheduleBuilder).build();
-
-        //启动job
-        scheduler.scheduleJob(jobDetail,trigger);
-
-        helloService.hello();
-
-    }*/
 
 }
